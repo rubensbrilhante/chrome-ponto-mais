@@ -1,0 +1,28 @@
+{
+  "name": "Ponto Mais Horas",
+  "description": "",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://api.pontomais.com.br/*"
+  ],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "128": "/images/ponto_disabled128x128.png"
+    }
+  },
+  "icons": {
+    "128": "/images/ponto128x128.png"
+  },
+  "options_page": "options.html"
+}
