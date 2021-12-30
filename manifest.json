@@ -7,7 +7,8 @@
     "service_worker": "background.js"
   },
   "host_permissions": [
-    "https://api.pontomais.com.br/*"
+    "https://api.pontomais.com.br/*",
+    "https://app2.pontomais.com.br/*"
   ],
   "permissions": [
     "storage",
