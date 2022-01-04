@@ -44,6 +44,12 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 });
 
 function injectDiv() {
+  let floatDiv = document.getElementById("extPontoDiv");
+  console.log("floatDiv", { floatDiv });
+  if (floatDiv != null) {
+    console.log("not re-inject");
+    return;
+  }
   let rawHtml =
     '<div id="extPontoDiv">' +
     '  <div id="extPontoDivHeader">Extensão para Pontomais</div>' +
@@ -248,10 +254,8 @@ function injectDiv() {
 
     }
 
-    // let startDate = new Date().toLocaleString('en-CA', { year: 'numeric', month: '2-digit', day: '2-digit' });
-    // let endDate = new Date().toLocaleString('en-CA', { year: 'numeric', month: '2-digit', day: '2-digit' });
-    let startDate = "2021-12-23";
-    let endDate = "2021-12-23";
+    let startDate = new Date().toLocaleString('en-CA', { year: 'numeric', month: '2-digit', day: '2-digit' });
+    let endDate = new Date().toLocaleString('en-CA', { year: 'numeric', month: '2-digit', day: '2-digit' });
 
     let perPage = 10;
     let sort = "asc,asc";
